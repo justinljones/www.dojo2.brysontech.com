@@ -1,0 +1,43 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+        <a class="navbar-brand" href="#">CFK Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li {% if (path(app.request.attributes.get('_route'),
+                    app.request.attributes.get('_route_params'))) == '/' %}class="active"{% endif %}>
+            <a href="/">Home</a></li>
+        
+        <li {% if (path(app.request.attributes.get('_route'),
+                    app.request.attributes.get('_route_params'))) == '/about_us' %}class="active"{% endif %}>
+            <a href="/about_us">About Us</a></li>
+        
+        <li {% if (path(app.request.attributes.get('_route'),
+                    app.request.attributes.get('_route_params'))) == '/programs' %}class="active"{% endif %}>
+            <a href="/programs">Programs</a></li>
+        
+        <li {% if (path(app.request.attributes.get('_route'),
+                    app.request.attributes.get('_route_params'))) == '/class_schedules' %}class="active"{% endif %}>
+            <a href="/class_schedules">Class Schedules</a></li>
+        
+        <li {% if (path(app.request.attributes.get('_route'),
+                    app.request.attributes.get('_route_params'))) == '/the_store' %}class="active"{% endif %}>
+            <a href="/the_store">CFK Martial Arts Store</a></li>
+        
+        <li {% if (path(app.request.attributes.get('_route'),
+                    app.request.attributes.get('_route_params'))) == '/news' %}class="active"{% endif %}>
+            <a href="/news">News</a></li>
+       {#<li><a href='/contact_us'>Contact Us</a></li>#}
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

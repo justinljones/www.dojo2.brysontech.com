@@ -16,6 +16,7 @@
                   href="{{ asset('css/font-awesome.min.css') }}"
             {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link href="https://fonts.googleapis.com/css?family=Macondo" rel="stylesheet">
         <style>
             body{
                 background-color: #424242;
@@ -30,6 +31,8 @@
             
             .navbar-inverse .navbar-nav > li > a {
                 color: red;
+                font-family: Macondo;
+                font-size: 20px;
             }
             
             /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
@@ -73,7 +76,7 @@
     </head>
     <body>
         <div id="banner"><img src="/images/karatebanner.png" alt="Karate Banner"></div>
-        {% include 'Class_Schedules/Layout/navbar.html.twig' %}
+        {% include 'Layout/navbar.html.twig' %}
         {% block body %}{% endblock %}
         {% block javascripts %}
         <script src="js/jquery.min.js"></script>
