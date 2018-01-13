@@ -2,20 +2,40 @@
 <html>
     <head>
         <meta charset="UTF-8" />
+        <meta name="theme-color" 
+              content="#ffffff">
         <title>{% block title %}Carolina Family Karate{% endblock %}</title>
+        
+        <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+        <link rel="icon" type="image/x-icon" href="{{ asset('images/icons/favicon.ico') }}" />
+        <link rel="apple-touch-icon" 
+              sizes="180x180" 
+              href="{{ asset('images/icons/apple-touch-icon.png') }}">
+        <link rel="icon" 
+              type="image/png" 
+              sizes="32x32" 
+              href="{{ asset('images/icons/favicon-32x32.png') }}">
+        <link rel="icon" 
+              type="image/png" 
+              sizes="16x16" 
+              href="{{ asset('images/icons/favicon-16x16.png') }}">
+        <link rel="manifest" 
+              href="{{ asset('images/icons/manifest.json') }}">
+        <link rel="mask-icon" 
+              href="{{ asset('images/icons/safari-pinned-tab.svg') }}" 
+              color="#5bbad5">
         {% block stylesheets %}
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="stylesheet" 
-                  type="text/css" 
-                  href="{{ asset('css/Bootstrap3/bootstrap.min.css') }}">
-            <link rel="stylesheet" 
-                  type="text/css" 
-                  href="{{ asset('css/Web/site.css') }}">
-            <link rel="stylesheet"
-                  type="text/css"
-                  href="{{ asset('css/font-awesome.min.css') }}"
-            {% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+              type="text/css" 
+              href="{{ asset('css/Bootstrap3/bootstrap.min.css') }}">
+        <link rel="stylesheet"
+              type="text/css"
+              href="{{ asset('css/font-awesome.min.css') }}">
+        <link rel="stylesheet" 
+              type="text/css" 
+              href="{{ asset('css/Web/site.css') }}">
+        {% endblock %}
+        
         <style>
             body{
                 background-color: #424242;
