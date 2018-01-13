@@ -25,9 +25,13 @@
              /* Remove the navbar's default margin-bottom and rounded borders */ 
             .navbar {
               margin-bottom: 0;
-              border-radius: 0;
+              border-radius: 0;              
             }
-
+            
+            .navbar-inverse .navbar-nav > li > a {
+                color: red;
+            }
+            
             /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
             .row.content {height: 450px}
 
@@ -48,6 +52,10 @@
               color: white;
               text-align: center;
             }
+            
+            #banner{
+                width: 100%
+            }
 
             /* On small screens, set height to 'auto' for sidenav and grid */
             @media screen and (max-width: 767px) {
@@ -58,26 +66,19 @@
               .row.content {height:auto;} 
             }
             
-            form{
-                color:black;
-            }
-            
-            label{
+            ul li{
                 color:red;
             }
-            
-            
         </style>
     </head>
     <body>
-        <p>Banner</p>
-        {% include 'Login/Layout/navbar.html.twig' %}
-        {% include 'Login/Layout/login_content.html.twig' %}
+        <div id="banner"><img src="/images/karatebanner.png" alt="Karate Banner"></div>
+        {% include 'Class_Schedules/Layout/navbar.html.twig' %}
         {% block body %}{% endblock %}
         {% block javascripts %}
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         {% endblock %}
-        {% include 'Login/Layout/footer.html.twig' %}
+        {% include 'Homepage/Layout/footer.html.twig' %}
     </body>
 </html>
