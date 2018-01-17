@@ -3,6 +3,11 @@
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}Carolina Family Karate{% endblock %}</title>
+        {% block javascripts %}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        {% endblock %}
         {% block stylesheets %}
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="stylesheet" 
@@ -17,10 +22,23 @@
             {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
         <link href="https://fonts.googleapis.com/css?family=Macondo" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Kavivanar|Oswald" rel="stylesheet">
         <style>
+            
             body{
                 background-color: #424242;
                 color: white;
+            }
+            
+            #cfkname{
+                font-family: Kavivanar;
+                color: #cc0000;
+                text-shadow: 2px 2px #000000;
+                text-align: center;
+            }
+            
+            h3{
+                text-align:center;
             }
             
              /* Remove the navbar's default margin-bottom and rounded borders */ 
@@ -88,10 +106,7 @@
         <div id="banner"><img  class="img-responsive" src="/images/karatebanner.png" alt="Karate Banner"></div>
         {% include 'Layout/navbar.html.twig' %}
         {% block body %}{% endblock %}
-        {% block javascripts %}
-        <script src="js/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        {% endblock %}
+        
         {% include 'Layout/footer.html.twig' %}
     </body>
 </html>
