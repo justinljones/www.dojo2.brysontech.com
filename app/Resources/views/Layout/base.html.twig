@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{% block title %}Carolina Family Karate{% endblock %}</title>
         {% block javascripts %}
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -22,7 +23,7 @@
             {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
         <link href="https://fonts.googleapis.com/css?family=Macondo" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Kavivanar|Oswald" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Kavivanar|Oswald|PT+Serif" rel="stylesheet">
         <style>
             
             body{
@@ -30,18 +31,11 @@
                 color: white;
             }
             
-            #cfkname{
-                font-family: Kavivanar;
-                color: #cc0000;
-                text-shadow: 2px 2px #000000;
-                text-align: center;
+            p{
+                font-family: 'PT Serif', serif;
             }
             
-            h3{
-                text-align:center;
-            }
-            
-             /* Remove the navbar's default margin-bottom and rounded borders */ 
+            /* Remove the navbar's default margin-bottom and rounded borders */ 
             .navbar {
               margin-bottom: 0;
               border-radius: 0;              
@@ -65,7 +59,7 @@
 
             /* Set black background color, white text and some padding */
             footer {
-              position: fixed;
+              /*position: fixed;*/
               left: 0;
               bottom: 0;
               width: 100%;
@@ -97,16 +91,30 @@
                 color:red;
             }
             
-            .img-responsive{
+            .banner-responsive{
                 height:50%;
+            }
+            
+           #cfkname{
+                font-family: Kavivanar;
+                color: #cc0000;
+                text-shadow: 2px 2px #000000;
+                text-align: center;
+            }
+            
+            #image_test{
+                background-color: gray;
+                width:100%;
+                
             }
         </style>
     </head>
     <body>
-        <div id="banner"><img  class="img-responsive" src="/images/karatebanner.png" alt="Karate Banner"></div>
+        <div id="banner"><img  class="img-responsive banner-responsive" src="/images/karatebanner.png" alt="Karate Banner"></div>
         {% include 'Layout/navbar.html.twig' %}
         {% block body %}{% endblock %}
         
-        {% include 'Layout/footer.html.twig' %}
+        
     </body>
+    {% include 'Layout/footer.html.twig' %}
 </html>

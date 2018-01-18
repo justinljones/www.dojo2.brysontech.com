@@ -11,15 +11,18 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
           <div class="item active">
-            <img src="/images/karateclipartcarousel.jpg" alt="Los Angeles">
+            <img class='img-responsive' src="/images/karateclipartcarousel.jpg" alt="Los Angeles">
           </div>
 
           <div class="item">
-            <img src="/images/karatejapancarousel.jpg" alt="Chicago">
+            <img class="img-responsive" src="/images/karatejapancarousel.jpg" alt="Chicago">
           </div>
             
           <div class="item">
-            <img src="/images/shotokantigercarousel.jpg" alt="Chicago">
+              <div id="image_test_container">
+                <div id="image_test">&nbsp</div>
+              </div>
+              <!--<img class="img-responsive"src="/images/shotokantigercarousel.jpg"> -->
           </div>  
 
           
@@ -39,42 +42,50 @@
     <div  class="row">
         <div>
             <h1 id="cfkname" class="center"><strong>Carolina Family Karate</strong></h1>
-        <h3>Why Martial Arts?</h3>
-        <p>Simply put, Martial Arts training will build physical strength and st
-            rength of character. Martial Arts are for everyone, regardless of ag
-            e or body type. And since it encourages a lifestyle of total well-be
-            ing, Martial Arts training is a lifelong journey rather than a desti
-            nation.</p>
+        </div>
+        <div class="col-sm-10">    
+            <h3>Why Martial Arts?</h3>
+            <p>Simply put, Martial Arts training will build physical strength and st
+                rength of character. Martial Arts are for everyone, regardless of ag
+                e or body type. And since it encourages a lifestyle of total well-be
+                ing, Martial Arts training is a lifelong journey rather than a desti
+                nation.</p>
 
-        <h3>Why Our School?</h3>
-        <p>We could say we’re the best in the area because we offer so much more
-            than other schools. But we’ll let you make that decision! From our f
-            riendly, knowledgeable and well-trained staff to our clean, safe and
-            well-equipped facility, we have the perfect program for YOU. We’re k
-            id-focused and adult-savvy. We’ll not only teach you all the techniq
-            ues and moves, but we’ll also educate you in the Martial Arts way: R
-            espect, Self-Confidence and Discipline.</p><br /> 
-        <p><strong>Parents:</strong> We guarantee to transform your child into a motivated, self-
-            starter who will clean his/her room without being asked! So come grow 
-            with us… and bring the entire family! Our leadership program is wh
-            y many teachers and doctors send students to us.</p><br />
+            <h3>Why Our School?</h3>
+            <p>We could say we’re the best in the area because we offer so much more
+                than other schools. But we’ll let you make that decision! From our f
+                riendly, knowledgeable and well-trained staff to our clean, safe and
+                well-equipped facility, we have the perfect program for YOU. We’re k
+                id-focused and adult-savvy. We’ll not only teach you all the techniq
+                ues and moves, but we’ll also educate you in the Martial Arts way: R
+                espect, Self-Confidence and Discipline.</p>
+            <p><strong>Parents:</strong> We guarantee to transform your child into a motivated, self-
+                starter who will clean his/her room without being asked! So come grow 
+                with us… and bring the entire family! Our leadership program is wh
+                y many teachers and doctors send students to us.</p>
 
-        <p>The history of our school is known as the first in the industry to in
-            corporate various levels of Leadership to progress through the curri
-            culum. We develop students into not just good kickers but well-round
-            ed individuals. Athletes improve their capabilities well beyond expe
-            ctations. Shy children are transformed into strong individuals that 
-            don’t follow the crowd. Aggressive or hyper children learn to channe
-            l the energy. Dr. Steve Reel (formerly of Ben Lippen Private Schools
-            Assistant Headmaster) said; “My whole family loved your program espe
-            cially because you conducted classes the whole family can adjust to 
-            and the Leadership Levels and challenges are priceless in an ever ch
-            allenging world.”</p><br />
+            <p>The history of our school is known as the first in the industry to in
+                corporate various levels of Leadership to progress through the curri
+                culum. We develop students into not just good kickers but well-round
+                ed individuals. Athletes improve their capabilities well beyond expe
+                ctations. Shy children are transformed into strong individuals that 
+                don’t follow the crowd. Aggressive or hyper children learn to channe
+                l the energy. Dr. Steve Reel (formerly of Ben Lippen Private Schools
+                Assistant Headmaster) said; “My whole family loved your program espe
+                cially because you conducted classes the whole family can adjust to 
+                and the Leadership Levels and challenges are priceless in an ever ch
+                allenging world.”</p>
 
-        <p>The history of our style is rooted in Shotokan which was developed by
-            the great Gichin Funakoshi.</p><br />
-
-</br >
+            <p>The history of our style is rooted in Shotokan which was developed by
+                the great <a href="/about_us">Gichin Funakoshi</a>.</p>
+        </div>
+        <div class="col-sm-2">
+            <img src="/images/4week.png" alt="4 week special">
         </div>
     </div>
 </div>
+<script>
+    var container=document.getElementById("image_test_container");
+    function addImage(){container.innerHTML="<img class='img-responsive' src='/images/shotokantigercarousel.jpg'>";}
+    addImage();
+</script>
