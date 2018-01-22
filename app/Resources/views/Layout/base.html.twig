@@ -31,7 +31,7 @@
                   href="{{ asset('css/site.css') }}">
         {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-        <link href="https://fonts.googleapis.com/css?family=Macondo" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Macondo|Alegreya+Sans+SC" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Kavivanar|Oswald|PT+Serif" rel="stylesheet">
         <style>
             
@@ -40,13 +40,14 @@
                 color: white;
             }
             
-            h3{
+            h2{
                 font-family: Oswald;
                 text-shadow: 2px 2px #000000;
             }
             
             p{
-                font-family: 'PT Serif', serif;
+                font-size: 17px;
+                font-family: Oswald;
             }
             
             /* Remove the navbar's default margin-bottom and rounded borders */ 
@@ -101,6 +102,12 @@
               .row.content {height:auto;} 
             }
             
+            @media screen and (max-width: 480px) {
+                #femblem{
+                    visibility: hidden;
+                }
+            }
+            
             ul li{
                 color:red;
             }
@@ -109,11 +116,13 @@
                 height:50%;
             }
             
-           #cfkname{
+           #title{
                 font-family: Kavivanar;
                 color: #cc0000;
                 text-shadow: 2px 2px #000000;
                 text-align: center;
+                font-size:50px;
+                font-weight: bold;
             }
             
             #image_test{
@@ -129,6 +138,13 @@
             #hompagetext{
                 font-size: 15px;
             }
+            
+            #fcontact{
+                font-family: "Alegreya Sans SC", sans-serif;
+                color:#ff4000;
+                font-weight: bold;
+            }
+                        
         </style>
     </head>
     <body>
