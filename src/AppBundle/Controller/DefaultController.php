@@ -11,79 +11,56 @@ class DefaultController extends Controller
     /**
      * @Route("/", name="homepage")
      */
-    public function indexAction(Request $request)
+    public function indexAction()
     {
-        // replace this example code with whatever you need
-        return $this->render('Homepage/Index/index.html.twig', [
-            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
-        ]);
+        return $this->render('Homepage/Index/index.html.twig');
     }
     
      /**
      * @Route("/about_us", name="about_us")
      */
-    public function indexAboutUs(Request $request)
+    public function indexAboutUs()
     {
-        // replace this example code with whatever you need
-        return $this->render('About_Us/Index/index.html.twig', [
-            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
-        ]);
+        return $this->render('About_Us/Index/index.html.twig');
     }
     
     /**
      * @Route("/programs", name="programs")
      */
-    public function indexPrograms(Request $request)
+    public function indexPrograms()
     {
-        // replace this example code with whatever you need
-        return $this->render('Programs/Index/index.html.twig', [
-            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
-        ]);
+        return $this->render('Programs/Index/index.html.twig');
     }
     
     /**
      * @Route("/class_schedules", name="class")
      */
-    public function indexClassSchedules(Request $request)
+    public function indexClassSchedules()
     {
-        // replace this example code with whatever you need
-        return $this->render('Class_Schedules/Index/index.html.twig', [
-            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
-        ]);
+        return $this->render('Class_Schedules/Index/index.html.twig');
     }
     
     /**
      * @Route("/the_store", name="store")
      */
-    public function indexTheStore(Request $request)
+    public function indexTheStore()
     {
-        // replace this example code with whatever you need
-        return $this->render('Store/Index/index.html.twig', [
-            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
-        ]);
+        return $this->render('Store/Index/index.html.twig');
     }
     
     /**
      * @Route("/news", name="news")
      */
-    public function indexNews(Request $request)
+    public function indexNews()
     {
-        // replace this example code with whatever you need
-        return $this->render('News/Index/index.html.twig', [
-            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
-        ]);
+        return $this->render('News/Index/index.html.twig');
     }
     
     /**
      * @Route("/contact_us", name="contact")
      */
-    public function indexContactUs(Request $request)
+    public function indexContactUs()
     {
-        // replace this example code with whatever you need
-        return $this->render('Contact_Us/Index/index.html.twig', [
-            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
-        ]);
+        return $this->render('Contact_Us/Index/index.html.twig');
     }
-    
-    
 }
