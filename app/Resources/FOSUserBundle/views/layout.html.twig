@@ -1,3 +1,11 @@
-{% include "Login/Index/index.html.twig" %}
+{%extends "Layout/base.html.twig" %}
 
+{%block body %}
+        
 
+        <div>
+            {% block fos_user_content %}
+            {% endblock fos_user_content %}
+        </div>
+        {%endblock%}
+  
