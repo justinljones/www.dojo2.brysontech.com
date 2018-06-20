@@ -1,1 +1,53 @@
-Testing
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div>
+                <h3>New Student</h3>
+            </div>
+            <form class="form" id="add_new_student" action="/add_new_student" method="post">
+                <div>
+                    <strong>Name</strong>
+                    <input
+                        type="text"
+                        class="form-control col-xs-6"                        
+                        name="student_name"                        
+                        placeholder="Insert Student Name">
+                </div>
+                <br/>
+                <br/>
+                <div>
+                    <strong>Age</strong>
+                    <input
+                        type="text"
+                        class="form-group"
+                        name="student_age"
+                        placeholder="Insert Student Age">
+                </div>
+                <div>
+                    <strong>Birthdate</strong>
+                    <input  
+                        id="student_birthdate" 
+                        name="student_birthdate" 
+                        type="text"                         
+                        placeholder="Insert Student Birthdate">
+                </div>
+                <br/>
+                <br/>
+                <div>
+                    <strong>Rank</strong>
+                    <textarea 
+                       rows="5"
+                       class="form-control" 
+                       style="width:100%;"
+                       name="student_rank"
+                       id="student_rank" 
+                       placeholder="Insert Student Rank"></textarea>
+                </div>
+                <button type="submit" 
+                        class="btn btn-default">
+                    Submit
+                </button>
+            </form>            
+        </div>        
+    </div>
+{%endblock%}

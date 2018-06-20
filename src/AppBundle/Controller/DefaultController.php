@@ -64,13 +64,5 @@ class DefaultController extends Controller
         return $this->render('Contact_Us/Index/index.html.twig');
     }
     
-    /**
-     * @Route("/admin", name="admin")
-     */
-    public function indexAdmin()
-    {
-        $this->denyAccessUnlessGranted('ROLE_ADMIN', null, "Unable to access this Page");
-        return $this->render("Admin/index.html.twig");     
-        
-    }
+    
 }
