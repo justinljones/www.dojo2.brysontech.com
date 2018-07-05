@@ -40,6 +40,26 @@ class AdminController extends Controller
         return $this->render('Admin/Student/index.html.twig');
     }
     
+    /**
+     * @Route("admin/students", name="admin/students")
+     */
+    public function StudentAction(Request $request)
+    { 
+        $em = $this->getDoctrine()->getManager();
+
+        $connection = $em->getConnection();
+        $statement = $connection->prepare(""
+                . "SELECT name, age, birthday, rank "
+                . "FROM students");
+        $statement->execute();
+        $results= $statement->fetchAll();
+        
+        return $this-> render ('Admin/Students/index.html.twig',[
+                'results' => $results 
+        ]);
+                    
+    }       
+    
 }
 
 /* 
