@@ -1,10 +1,18 @@
 {% block body %}
-    <div class="container">
-        <table>
+    <div class="container">        
+        <table class="table">
             <th>Name</th>
             <th>Age</th>
             <th>Birthday</th>
             <th>Rank</th>
-        </table>
+            {%for result in results%}
+            <tr>
+                <td>{{result.name}}</td>           
+                <td>{{result.age}}</td>            
+                <td>{{result.birthday}}</td>            
+                <td>{{result.rank}}</td>
+            </tr>
+            {%endfor%}
+        </table>           
     </div>
 {%endblock%}
