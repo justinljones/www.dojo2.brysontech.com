@@ -21,7 +21,7 @@ class AdminController extends Controller
     /**
      * @Route("admin/add_student", name="admin/add_student")
      */
-    public function addNewStudentAction(Request $request)
+    public function addNewStudent(Request $request)
     {        
         $em = $this->getDoctrine()->getManager();
         $connection = $em->getConnection();
@@ -49,7 +49,7 @@ class AdminController extends Controller
 
         $connection = $em->getConnection();
         $statement = $connection->prepare(""
-                . "SELECT name, age, birthday, rank "
+                . "SELECT id, name, age, birthday, rank "
                 . "FROM students");
         $statement->execute();
         $results= $statement->fetchAll();
@@ -58,7 +58,27 @@ class AdminController extends Controller
                 'results' => $results 
         ]);
                     
-    }       
+    }
+    
+    /**
+     * @Route("admin/student/{id}", name="admin/student/{id}")
+     */
+    public function IndividualStudentAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $connection = $em->getConnection();
+        $statement = $connection->prepare(""
+                . "SELECT name, age, birthday, rank "
+                . "FROM students "
+                . "WHERE id = :id");
+        $statement->bindValue('id', $id);
+        $statement->execute();
+        $results= $statement->fetchAll();
+        
+        return $this-> render ('Admin/Student/index.html.twig',[
+                'results' => $results 
+        ]);   
+    }
     
 }
 

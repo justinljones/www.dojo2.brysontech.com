@@ -1,7 +1,18 @@
 {% block body %}
     <div class="container">
-        <div class="row">
-            <strong>Student Successfully Added</strong>                            
-        </div>        
+        <table class="table">
+            <th>Name</th>
+            <th>Age</th>
+            <th>Birthday</th>
+            <th>Rank</th>
+            {%for result in results%}
+            <tr>
+                <td>{{result.name}}</td>           
+                <td>{{result.age}}</td>            
+                <td>{{result.birthday}}</td>            
+                <td>{{result.rank}}</td>
+            </tr>
+            {%endfor%}
+        </table>          
     </div>
 {%endblock%}

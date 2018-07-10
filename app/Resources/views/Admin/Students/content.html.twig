@@ -7,7 +7,7 @@
             <th>Rank</th>
             {%for result in results%}
             <tr>
-                <td>{{result.name}}</td>           
+                <td><a href="/admin/student/{{result.id}}" title="{{result.name}}">{{result.name}}</a></td>           
                 <td>{{result.age}}</td>            
                 <td>{{result.birthday}}</td>            
                 <td>{{result.rank}}</td>
